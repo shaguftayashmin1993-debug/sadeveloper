@@ -2,6 +2,12 @@ import { useState } from "react";
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
 
+import image1 from "../assets/images/modern_indian_villa_1200_1779102434930.png";
+import image2 from "../assets/images/contemporary_ranchi_home_2400_1779102453300.png";
+import image3 from "../assets/images/urban_indian_duplex_1800_1779102471590.png";
+import image4 from "../assets/images/traditional_ranchi_estate_3500_1779102488583.png";
+import image5 from "../assets/images/compact_indian_bungalow_800_sq_ft_1779102505835.png";
+
 const DESIGNS = [
   { 
     id: 1, 
@@ -9,7 +15,7 @@ const DESIGNS = [
     area: 1200, 
     category: "Compact", 
     price: "From ₹45L",
-    image: "/src/assets/images/modern_indian_villa_1200_1779102434930.png"
+    image: image1
   },
   { 
     id: 2, 
@@ -17,7 +23,7 @@ const DESIGNS = [
     area: 2400, 
     category: "Luxury", 
     price: "From ₹85L",
-    image: "/src/assets/images/contemporary_ranchi_home_2400_1779102453300.png"
+    image: image2
   },
   { 
     id: 3, 
@@ -25,7 +31,7 @@ const DESIGNS = [
     area: 1800, 
     category: "Mid-Range", 
     price: "From ₹62L",
-    image: "/src/assets/images/urban_indian_duplex_1800_1779102471590.png"
+    image: image3
   },
   { 
     id: 4, 
@@ -33,7 +39,7 @@ const DESIGNS = [
     area: 3500, 
     category: "Estate", 
     price: "From ₹1.4Cr",
-    image: "/src/assets/images/traditional_ranchi_estate_3500_1779102488583.png"
+    image: image4
   },
   { 
     id: 5, 
@@ -41,7 +47,7 @@ const DESIGNS = [
     area: 800, 
     category: "Compact", 
     price: "From ₹28L",
-    image: "/src/assets/images/compact_indian_bungalow_800_sq_ft_1779102505835.png"
+    image: image5
   },
 ];
 
