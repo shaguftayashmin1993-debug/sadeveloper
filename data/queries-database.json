@@ -1,0 +1,36 @@
+[
+  {
+    "id": "q-1",
+    "name": "Amit Sharma",
+    "email": "amit.sharma@gmail.com",
+    "message": "Looking to build a 3 BHK modern duplex on my 30x50 plot in Lalpur, Ranchi. Need elegant design with a small garden.",
+    "status": "pending",
+    "createdAt": "2026-05-18T10:15:00.000Z"
+  },
+  {
+    "id": "q-2",
+    "name": "Priya Sen",
+    "email": "priya.sen@outlook.com",
+    "message": "Interested in a traditional Ranchi-themed villa with stone finishes in Morabadi suburb. Plot size 40x60. Need Vastu compliancy.",
+    "status": "contacted",
+    "projectCode": "SA-1025",
+    "createdAt": "2026-05-18T12:30:00.000Z"
+  },
+  {
+    "id": "q-3",
+    "name": "Rohan Deshmukh",
+    "email": "rohan.d@yahoo.com",
+    "message": "Requesting a site review for my plot in Kanke, Ranchi. Planning a sleek minimalist 2-story construction.",
+    "status": "project_created",
+    "projectCode": "SA-2045",
+    "createdAt": "2026-05-19T08:45:00.000Z"
+  },
+  {
+    "id": "q-4",
+    "name": "Siddharth Jha",
+    "email": "sid.jha@ranchi.co",
+    "message": "Need consultation for structural reinforcement and elevation design of an existing duplex near Argora.",
+    "status": "pending",
+    "createdAt": "2026-05-19T14:20:00.000Z"
+  }
+]

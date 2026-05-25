@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #CA4E12;
+  --color-on-primary: #ffffff;
+  --color-background: #FFFBF3;
+  --color-on-background: #231C16;
+  --color-surface: #FFFBF3;
+  --color-on-surface: #231C16;
+  --color-surface-container: #F5EAD2;
+  --color-surface-container-low: #FAF4E5;
+  --color-surface-container-lowest: #FFFCF6;
+  --color-surface-container-high: #EEDCBC;
+  --color-surface-container-highest: #E5CDA2;
+  --color-on-surface-variant: #5C4A3C;
+  --color-outline-variant: #DEC3A2;
+  --color-inverse-surface: #0A281E;
+  --color-inverse-on-surface: #F9F5EA;
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Playfair Display", serif;
+
+  --spacing-margin-desktop: 64px;
+  --spacing-container-max: 1280px;
+  --spacing-gutter: 24px;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-sans;
+  }
+}
+
+@layer utilities {
+  .architectural-grid {
+    background-size: 40px 40px;
+    background-image: radial-gradient(circle, var(--color-outline-variant) 1px, transparent 1px);
+  }
+
+  .text-display-lg {
+    @apply font-display text-4xl md:text-6xl font-bold leading-[1.1] tracking-tight;
+  }
+
+  .text-headline-md {
+    @apply font-display text-2xl font-medium leading-[1.4];
+  }
+
+  .text-label-md {
+    @apply font-sans text-sm font-semibold uppercase tracking-widest leading-none;
+  }
+}
+

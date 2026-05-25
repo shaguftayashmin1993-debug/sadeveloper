@@ -1,0 +1,40 @@
+[
+  {
+    "id": "SA-1025",
+    "customerName": "Priya Sen",
+    "email": "priya.sen@outlook.com",
+    "projectTitle": "Traditional Ranchi Villa (Morabadi Theme)",
+    "plotSize": "40x60",
+    "address": "Morabadi Road, Ranchi, Jharkhand",
+    "progressPercent": 45,
+    "status": "Excavation",
+    "milestones": [
+      { "title": "Site Inspection & Structural Design Study", "date": "18 May 2026", "status": "completed" },
+      { "title": "RRDA Sanction & Clearances", "date": "20 May 2026", "status": "completed" },
+      { "title": "Foundation Layout & Excavation Work", "date": "22 May 2026", "status": "in-progress" },
+      { "title": "Brickwork & Masonry Structure", "date": "25 June 2026", "status": "pending" },
+      { "title": "Plastering & Interior Finishings", "date": "10 Aug 2026", "status": "pending" },
+      { "title": "Final Handover & Vastu Key Ceremony", "date": "1 Sept 2026", "status": "pending" }
+    ],
+    "createdAt": "2026-05-18T12:35:00.000Z",
+    "updatedAt": "2026-05-20T16:00:00.000Z"
+  },
+  {
+    "id": "SA-2045",
+    "customerName": "Rohan Deshmukh",
+    "projectTitle": "Sleek Minimalist Villa (Kanke Suburbs)",
+    "email": "rohan.d@yahoo.com",
+    "plotSize": "30x50",
+    "address": "Kanke Ring Road, Ranchi, Jharkhand",
+    "progressPercent": 15,
+    "status": "Approval",
+    "milestones": [
+      { "title": "Detailed Survey & Soil Testing", "date": "19 May 2026", "status": "completed" },
+      { "title": "Parametric 3D Design Drafting & Approvals", "date": "22 May 2026", "status": "in-progress" },
+      { "title": "Steel Framing & Masonry Layout", "date": "15 June 2026", "status": "pending" },
+      { "title": "Finishes, Furnishings & Handover", "date": "15 Oct 2026", "status": "pending" }
+    ],
+    "createdAt": "2026-05-19T08:50:00.000Z",
+    "updatedAt": "2026-05-19T08:50:00.000Z"
+  }
+]

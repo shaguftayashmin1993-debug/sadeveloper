@@ -1,0 +1,47 @@
+{
+  "entities": {
+    "inquiry": {
+      "title": "Inquiry",
+      "description": "Customer consultation and site-visit requests",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Unique auto-generated ID" },
+        "name": { "type": "string", "description": "Client full name" },
+        "email": { "type": "string", "description": "Client email address" },
+        "message": { "type": "string", "description": "Plot brief or requirement details" },
+        "status": { "type": "string", "enum": ["pending", "contacted", "project_created"] },
+        "projectCode": { "type": "string", "description": "Optional associated project ID if converted" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["name", "email", "message", "status", "createdAt"]
+    },
+    "project": {
+      "title": "Project",
+      "description": "Customer construction site progress tracker for Ranchi homes",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Unique project code (e.g., SA-8329)" },
+        "customerName": { "type": "string" },
+        "email": { "type": "string" },
+        "projectTitle": { "type": "string" },
+        "plotSize": { "type": "string" },
+        "address": { "type": "string" },
+        "progressPercent": { "type": "number" },
+        "status": { "type": "string", "enum": ["Planning", "Approval", "Excavation", "Masonry", "Finishing", "Handover"] },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "customerName", "email", "projectTitle", "plotSize", "address", "progressPercent", "status", "createdAt", "updatedAt"]
+    }
+  },
+  "firestore": {
+    "/inquiries/{inquiryId}": {
+      "schema": "inquiry",
+      "description": "Collection of submissions from the Ranchi team inquiry form"
+    },
+    "/projects/{projectId}": {
+      "schema": "project",
+      "description": "Customizable construction trackers for customers with unique project codes"
+    }
+  }
+}

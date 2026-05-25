@@ -1,0 +1,63 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Global safety catch-all
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    function isValidId(id) {
+      return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    function incoming() {
+      return request.resource.data;
+    }
+
+    function existing() {
+      return resource.data;
+    }
+
+    function isValidInquiry(data) {
+      return data.keys().hasAll(['name', 'email', 'message', 'status', 'createdAt'])
+        && data.keys().size() == 5
+        && data.name is string && data.name.size() >= 1 && data.name.size() <= 128
+        && data.email is string && data.email.size() >= 3 && data.email.size() <= 128
+        && data.message is string && data.message.size() >= 1 && data.message.size() <= 5000
+        && data.status is string && (data.status == 'pending' || data.status == 'contacted' || data.status == 'project_created')
+        && data.createdAt == request.time;
+    }
+
+    function isValidProject(data) {
+      return data.keys().hasAll(['id', 'customerName', 'email', 'projectTitle', 'plotSize', 'address', 'progressPercent', 'status', 'createdAt', 'updatedAt'])
+        && data.keys().size() == 10
+        && data.id is string && data.id.size() >= 2 && data.id.size() <= 64
+        && data.customerName is string && data.customerName.size() >= 1 && data.customerName.size() <= 128
+        && data.email is string && data.email.size() >= 3 && data.email.size() <= 128
+        && data.projectTitle is string && data.projectTitle.size() >= 1 && data.projectTitle.size() <= 256
+        && data.plotSize is string && data.plotSize.size() >= 1 && data.plotSize.size() <= 64
+        && data.address is string && data.address.size() >= 1 && data.address.size() <= 512
+        && data.progressPercent is number && data.progressPercent >= 0 && data.progressPercent <= 100
+        && data.status is string && (data.status == 'Planning' || data.status == 'Approval' || data.status == 'Excavation' || data.status == 'Masonry' || data.status == 'Finishing' || data.status == 'Handover')
+        && data.createdAt == request.time || data.createdAt == existing().createdAt
+        && data.updatedAt == request.time;
+    }
+
+    match /inquiries/{inquiryId} {
+      allow create: if isValidId(inquiryId) && isValidInquiry(incoming());
+      // Admin gets full control
+      allow read, update, delete: if true; 
+    }
+
+    match /projects/{projectId} {
+      allow get: if isValidId(projectId);
+      allow create: if isValidId(projectId) && isValidProject(incoming());
+      allow update: if isValidId(projectId) && isValidProject(incoming()) && (
+        // Enforce temporal/immorality locks on index update if exists
+        incoming().createdAt == existing().createdAt
+      );
+      allow list, delete: if true;
+    }
+  }
+}
