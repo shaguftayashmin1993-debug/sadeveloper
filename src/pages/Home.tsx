@@ -132,6 +132,7 @@ function FeaturedCard() {
           src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWvNBhfZBSo3P47FYT1YnceY3OS7jOqZ-wK2YuLGo5zQfG6d2xlVAZraVeP82vr6tXJ2oEnRChGNV74ThtdE4A7FIMF2G4zSCV_9EMJBzOHQLlaJfORlQ3y8BK1lqnGTch5anKPOY8ce3FW8hlWOttKiiRMsh1cdYCtRYYHYexKBKvBhaYRDEz2yz2TjSGtHC4nPG_yBRX1NukCfz3FIbWIbw4yZDbl-VZ6UKgU11QAgx2sz2cdKSRS0aSW4rWw9LWNbefy4-K6DU" 
           alt="Climatology Vastu Chart" 
           className="w-full h-full object-cover grayscale opacity-40 mix-blend-screen"
+          referrerPolicy="no-referrer"
         />
       </div>
     </article>
