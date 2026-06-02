@@ -123,9 +123,9 @@ function FeaturedCard() {
         <p className="text-inverse-on-surface/90 mb-8 max-w-md text-sm leading-relaxed">
           Unlock a harmonious living experience. We overlay Vedic Vastu orientation algorithms with modern day-light & ventilation simulations for Ranchi's distinct seasons.
         </p>
-        <button className="bg-[#CA4E12] text-white hover:bg-[#CA4E12]/90 transition-all px-8 py-3 text-label-md font-bold uppercase tracking-wider">
+        <Link to="/consultation" className="bg-[#CA4E12] text-white hover:bg-[#CA4E12]/90 transition-all px-8 py-3 text-label-md font-bold uppercase tracking-wider inline-block">
           Schedule Consultation
-        </button>
+        </Link>
       </div>
       <div className="md:w-1/2 h-64 md:h-80 w-full relative">
         <img 

@@ -8,6 +8,7 @@ const navLinks = [
   { name: "About", path: "/about" },
   { name: "Process", path: "/process" },
   { name: "Customer Portal", path: "/portal" },
+  { name: "Staff Panel", path: "/admin" },
 ];
 
 export default function Layout() {
@@ -37,9 +38,9 @@ export default function Layout() {
             ))}
           </nav>
           <div className="flex items-center gap-6">
-            <button className="flex h-10 w-10 items-center justify-center rounded-full hover:bg-surface-container-low transition-colors">
+            <Link to="/admin" className="flex h-10 w-10 items-center justify-center rounded-full hover:bg-surface-container-low transition-colors" title="Staff Admin Dashboard">
               <AccountCircle className="h-6 w-6 text-on-surface" />
-            </button>
+            </Link>
             <Link to="/consultation" className="bg-primary px-6 py-2.5 text-label-md text-on-primary hover:bg-primary/90 transition-all active:scale-95 inline-block">
               Start Project
             </Link>
