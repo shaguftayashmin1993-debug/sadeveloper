@@ -9,13 +9,13 @@ export default function About() {
           animate={{ opacity: 1, x: 0 }}
           className="text-display-lg mb-8"
         >
-          SA Developers Ranchi
+          SA Concepts & Design Ranchi
         </motion.h1>
         <div className="grid md:grid-cols-2 gap-16 items-start">
           <div className="space-y-6">
             <h2 className="text-headline-md text-primary">Our Philosophy</h2>
             <p className="text-on-surface-variant leading-relaxed">
-              Founded on the principles of structural integrity and aesthetic clarity, SA Developers is more than an architecture firm. We are engineers of experience, designers of legacy, and stewards of the environment.
+              Founded on the principles of structural integrity and aesthetic clarity, SA Concepts & Design is more than an architecture firm. We are engineers of experience, designers of legacy, and stewards of the environment.
             </p>
             <p className="text-on-surface-variant leading-relaxed text-sm">
               We believe that every line drawn carry the weight of mathematical certainty and human aspiration. Our studio operates at the nexus of high-technology and artisanal craftsmanship.

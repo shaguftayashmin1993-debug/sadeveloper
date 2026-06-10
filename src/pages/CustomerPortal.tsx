@@ -84,7 +84,7 @@ export default function CustomerPortal() {
             <div className="h-1.5 w-12 bg-[#0A523A]" />
           </div>
           <p className="text-on-surface-variant text-sm leading-relaxed mb-10">
-            Welcome to the SA Developers Client Experience. Enter your unique tracking key (provided in your consultation receipt, e.g. <span className="font-mono text-primary font-bold">SA-1025</span>) to check the real-world status of your villa layout.
+            Welcome to the SA Concepts & Design Client Experience. Enter your unique tracking key (provided in your consultation receipt, e.g. <span className="font-mono text-primary font-bold">SA-1025</span>) to check the real-world status of your villa layout.
           </p>
 
           <form onSubmit={handleLookup} className="space-y-6 text-left">

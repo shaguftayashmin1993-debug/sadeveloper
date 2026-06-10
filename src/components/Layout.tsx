@@ -21,7 +21,7 @@ export default function Layout() {
         <div className="mx-auto flex h-20 max-w-container-max items-center justify-between px-margin-desktop">
           <div className="flex flex-col">
             <Link to="/" className="text-xl md:text-2xl font-display font-bold uppercase tracking-tight text-primary transition-colors">
-               SA Developers
+               SA Concepts & Design
             </Link>
             <span className="text-[10px] font-semibold text-[#0A523A] uppercase tracking-wider font-sans -mt-1 block">Auspicious Ranchi Homes</span>
           </div>
@@ -55,12 +55,12 @@ export default function Layout() {
       <footer className="bg-surface-container-highest border-t border-outline-variant/30">
         <div className="mx-auto max-w-container-max px-margin-desktop py-16 grid grid-cols-1 md:grid-cols-4 gap-gutter">
           <div className="md:col-span-2">
-             <div className="text-headline-md font-bold mb-6">SA Developers</div>
+             <div className="text-headline-md font-bold mb-6">SA Concepts & Design</div>
              <p className="text-on-surface-variant max-w-xs mb-2 text-sm italic">
                 Ranchi, Jharkhand, India
              </p>
              <p className="text-on-surface-variant max-w-xs mb-8 text-sm">
-                © 2024 SA Developers. Precision in every line.
+                © 2024 SA Concepts & Design. Precision in every line.
              </p>
              <div className="flex gap-6">
                 <button className="text-on-surface-variant hover:text-primary transition-colors"><Share className="w-5 h-5"/></button>

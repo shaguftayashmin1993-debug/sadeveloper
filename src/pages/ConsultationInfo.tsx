@@ -21,7 +21,7 @@ export default function ConsultationInfo() {
           Comprehensive Architectural Consultation
         </motion.h1>
         <p className="text-on-surface-variant leading-relaxed text-lg md:text-xl">
-          At SA Developers, we understand that building a home in Ranchi involves unique terrain, climate, and local regulations. Our consultation service is designed to give you a clear roadmap from plot selection to final possession.
+          At SA Concepts & Design, we understand that building a home in Ranchi involves unique terrain, climate, and local regulations. Our consultation service is designed to give you a clear roadmap from plot selection to final possession.
         </p>
       </header>
 
