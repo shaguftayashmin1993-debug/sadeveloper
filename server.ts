@@ -42,7 +42,7 @@ async function startServer() {
 
   // API Route: Client Consultation Inquiry Submission
   app.post("/api/contact", (req, res) => {
-    const { name, email, message } = req.body;
+    const { name, email, phone, message } = req.body;
     
     // Read and save to local JSON file
     const queries = readJSONFile(QUERIES_FILE, []);
@@ -56,6 +56,7 @@ async function startServer() {
       id: `q-${queries.length + 1}`,
       name: name || "Anonymous Client",
       email: email || "no-email@sa.com",
+      phone: phone || "no-phone",
       message: message || "",
       status: "pending",
       projectCode: newProjectCode,

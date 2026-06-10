@@ -8,12 +8,13 @@
         "id": { "type": "string", "description": "Unique auto-generated ID" },
         "name": { "type": "string", "description": "Client full name" },
         "email": { "type": "string", "description": "Client email address" },
+        "phone": { "type": "string", "description": "Client contact phone number" },
         "message": { "type": "string", "description": "Plot brief or requirement details" },
         "status": { "type": "string", "enum": ["pending", "contacted", "project_created"] },
         "projectCode": { "type": "string", "description": "Optional associated project ID if converted" },
         "createdAt": { "type": "string", "format": "date-time" }
       },
-      "required": ["name", "email", "message", "status", "createdAt"]
+      "required": ["name", "email", "phone", "message", "status", "createdAt"]
     },
     "project": {
       "title": "Project",

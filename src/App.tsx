@@ -8,7 +8,6 @@ import ServiceDetail from "./pages/ServiceDetail";
 import Consultation from "./pages/Consultation";
 import ConsultationInfo from "./pages/ConsultationInfo";
 import CustomerPortal from "./pages/CustomerPortal";
-import AdminDashboard from "./pages/AdminDashboard";
 
 import DesignDetail from "./pages/DesignDetail";
 
@@ -26,7 +25,6 @@ export default function App() {
           <Route path="consultation" element={<Consultation />} />
           <Route path="consultation-info" element={<ConsultationInfo />} />
           <Route path="portal" element={<CustomerPortal />} />
-          <Route path="admin" element={<AdminDashboard />} />
         </Route>
       </Routes>
     </BrowserRouter>

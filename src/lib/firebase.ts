@@ -78,6 +78,7 @@ export interface CustomerInquiry {
   id?: string;
   name: string;
   email: string;
+  phone: string;
   message: string;
   status: "pending" | "contacted" | "project_created";
   projectCode?: string;
@@ -107,12 +108,13 @@ export interface ConstructionProject {
 // Core Operations wrapper
 
 // 1. Inquiries
-export async function createInquiry(name: string, email: string, message: string): Promise<string> {
+export async function createInquiry(name: string, email: string, phone: string, message: string): Promise<string> {
   const path = "inquiries";
   try {
     const docRef = await addDoc(collection(db, path), {
       name,
       email,
+      phone,
       message,
       status: "pending",
       createdAt: serverTimestamp()

@@ -20,10 +20,11 @@ service cloud.firestore {
     }
 
     function isValidInquiry(data) {
-      return data.keys().hasAll(['name', 'email', 'message', 'status', 'createdAt'])
-        && data.keys().size() == 5
+      return data.keys().hasAll(['name', 'email', 'phone', 'message', 'status', 'createdAt'])
+        && data.keys().size() == 6
         && data.name is string && data.name.size() >= 1 && data.name.size() <= 128
         && data.email is string && data.email.size() >= 3 && data.email.size() <= 128
+        && data.phone is string && data.phone.size() >= 5 && data.phone.size() <= 32
         && data.message is string && data.message.size() >= 1 && data.message.size() <= 5000
         && data.status is string && (data.status == 'pending' || data.status == 'contacted' || data.status == 'project_created')
         && data.createdAt == request.time;

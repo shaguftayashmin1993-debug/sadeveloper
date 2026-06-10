@@ -4,7 +4,7 @@ import { createInquiry } from "../lib/firebase";
 
 export default function Consultation() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [formData, setFormData] = useState({ name: "", email: "", phone: "", message: "" });
   const [generatedCode, setGeneratedCode] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -21,7 +21,7 @@ export default function Consultation() {
       
       // 2. Submit to Firestore for real-time syncd tracking
       try {
-        await createInquiry(formData.name, formData.email, formData.message);
+        await createInquiry(formData.name, formData.email, formData.phone, formData.message);
       } catch (fsError) {
         console.warn("Firestore collection sync deferred or using offline buffer: ", fsError);
       }
@@ -112,6 +112,17 @@ export default function Consultation() {
                   type="email" 
                   value={formData.email}
                   onChange={(e) => setFormData({...formData, email: e.target.value})}
+                  className="w-full bg-transparent border-b border-outline-variant py-3 focus:border-primary outline-none transition-colors px-1"
+                />
+              </div>
+              <div>
+                <label className="text-label-md block mb-4">Contact Number (Phone)</label>
+                <input 
+                  required
+                  type="tel" 
+                  placeholder="e.g. +91 98765 43210"
+                  value={formData.phone}
+                  onChange={(e) => setFormData({...formData, phone: e.target.value})}
                   className="w-full bg-transparent border-b border-outline-variant py-3 focus:border-primary outline-none transition-colors px-1"
                 />
               </div>

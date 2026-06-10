@@ -8,7 +8,6 @@ const navLinks = [
   { name: "About", path: "/about" },
   { name: "Process", path: "/process" },
   { name: "Customer Portal", path: "/portal" },
-  { name: "Staff Panel", path: "/admin" },
 ];
 
 export default function Layout() {
@@ -38,7 +37,7 @@ export default function Layout() {
             ))}
           </nav>
           <div className="flex items-center gap-6">
-            <Link to="/admin" className="flex h-10 w-10 items-center justify-center rounded-full hover:bg-surface-container-low transition-colors" title="Staff Admin Dashboard">
+            <Link to="/portal" className="flex h-10 w-10 items-center justify-center rounded-full hover:bg-surface-container-low transition-colors" title="Customer Portal">
               <AccountCircle className="h-6 w-6 text-on-surface" />
             </Link>
             <Link to="/consultation" className="bg-primary px-6 py-2.5 text-label-md text-on-primary hover:bg-primary/90 transition-all active:scale-95 inline-block">
@@ -76,7 +75,6 @@ export default function Layout() {
               <li><Link to="/process" className="text-label-md tracking-wider text-xs text-on-surface-variant hover:text-primary">Our Process</Link></li>
               <li><Link to="/consultation-info" className="text-label-md tracking-wider text-xs text-on-surface-variant hover:text-primary">Consultation Service</Link></li>
               <li><Link to="/portal" className="text-label-md tracking-wider text-xs text-on-surface-variant hover:text-primary">Customer Portal</Link></li>
-              <li><Link to="/admin" className="text-label-md tracking-wider text-xs text-on-surface-variant hover:text-primary">Staff Admin Panel</Link></li>
             </ul>
           </div>
           <div>
